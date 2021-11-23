@@ -146,7 +146,20 @@ export class DashboardComponent implements OnInit {
             numberSuffix: 'km',
             theme: 'fusion'
           },
-          data
+          data,
+          trendlines: [
+            {
+                "line": [
+                    {
+                        "startvalue": "18500",
+                        "color": "#29C3BE",
+                        "displayvalue": "Average{br}weekly{br}footfall",
+                        "valueOnRight": "1",
+                        "thickness": "2"
+                    }
+                ]
+            }
+        ]
         };
 
       }, err => {

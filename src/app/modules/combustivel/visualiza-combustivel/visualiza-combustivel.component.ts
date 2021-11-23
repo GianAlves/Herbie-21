@@ -51,15 +51,14 @@ export class VisualizaCombustivelComponent implements OnInit {
     ];
 
     await this.buscaDados();
-    setTimeout(() => {
       this.loading = false;
-    }, 500);
   }
 
   async buscaDados() {
     this.data = [];
 
     this.combustivelService.read_all().subscribe((res) => {
+      console.table(res);
       res.forEach((item) => {
         let row = {
           gas_type: this.validaPosicao(item.gas_type),
